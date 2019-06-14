@@ -1,0 +1,19 @@
+{
+  "name": "买买买抢购助手",
+  "description": "线上购物辅助插件，辅助抢购，增加秒杀概率",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["tabs", "notifications", "storage"]
+}
